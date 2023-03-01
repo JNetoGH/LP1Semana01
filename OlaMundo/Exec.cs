@@ -11,7 +11,7 @@ namespace OlaMundo {
         ///     It's the entrance of the program
         /// </summary>
         /// <param name="args">
-        ///     Can be set at the program execution
+        ///     Can be used for passing in command line parameters
         /// </param>
         private static void Main(string[] args) {
             Console.WriteLine("Hello, World!");

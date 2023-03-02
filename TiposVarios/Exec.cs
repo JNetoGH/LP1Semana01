@@ -4,9 +4,12 @@ namespace TiposVarios {
     
     internal static class Exec {
         
-        private static void Main(string[] args) { 
+        private static void Main(string[] args) {
             
-            // Integers (Z)
+            
+            
+            #region Integers
+            
             // Guardados nos formatos de Módulo e Sinal(MS), Complemento para 1(c1) e Complemento para 2(c2), 1 bit é reservado para o sinal.
             sbyte n1 = 120; // 8 bits  => 1 byte:  (MS/c1/c2) sign(0)0000000
             short n2 = 651; // 16 bits => 2 bytes: (MS/c1/c2) sign(0)0000000.00000000
@@ -31,9 +34,30 @@ namespace TiposVarios {
             int n14 = 0x54EA;
             
             ValueType[] arr = new ValueType[] { n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14 };
+            Console.WriteLine(" ");
             for (int i = 0; i < arr.Length; i++) 
                 Console.WriteLine($"{arr[i].GetType().Name} n{i} = {arr[i]}");
+            Console.WriteLine(" ");
+
+            #endregion
             
+            
+            
+            
+            #region Unicode
+
+            char character1 = ('\u00BD');
+            Console.WriteLine($"character 1: {character1}");
+            
+            char character2 = ('\u00A4');
+            Console.WriteLine($"character 2: {character2}");
+
+            #endregion
+
+            
+            
+          
+
         }
     }
 }

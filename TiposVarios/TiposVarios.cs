@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Text;
 
 namespace TiposVarios {
     
     internal static class Exec {
         
         private static void Main(string[] args) {
-
+            
+            // setting encoder
+            Console.OutputEncoding = Encoding.UTF8;
+            
             #region Integers
             
             // Guardados nos formatos de Módulo e Sinal(MS), Complemento para 1(c1) e Complemento para 2(c2), 1 bit é reservado para o sinal.
@@ -44,10 +48,10 @@ namespace TiposVarios {
             
             #region Unicode
 
-            char character1 = ('\u00BD');
+            char character1 = '\u1342';
             Console.WriteLine($"character 1: {character1}");
             
-            char character2 = ('\u00A4');
+            char character2 = '\u5554';
             Console.WriteLine($"character 2: {character2}");
 
             #endregion

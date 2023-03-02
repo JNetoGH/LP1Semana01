@@ -83,7 +83,7 @@ namespace TiposVarios {
             bool flag =  randNum > 5;
             Console.WriteLine($"flag ({randNum} > 5)?: {flag}");
 
-            bool isMorning = DateTime.Now.TimeOfDay.Hours is < 12 and > 6;
+            bool isMorning = DateTime.Now.TimeOfDay.Hours is < 12 and > 4;
             Console.WriteLine($"is it Morning now ({DateTime.Now})? {isMorning}");
             
             #endregion

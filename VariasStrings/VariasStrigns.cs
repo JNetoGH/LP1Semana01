@@ -36,7 +36,6 @@ namespace VariasStrings {
             #endregion
 
             
-            
             # region EX 6
             
             double xx = 0.12345;

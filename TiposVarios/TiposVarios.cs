@@ -10,6 +10,7 @@ namespace TiposVarios {
             // Setting encoder
             Console.OutputEncoding = Encoding.UTF8;
             
+            
             #region Integers
             
             // Guardados nos formatos de Módulo e Sinal(MS), Complemento para 1(c1) e Complemento para 2(c2), 1 bit é reservado para o sinal.

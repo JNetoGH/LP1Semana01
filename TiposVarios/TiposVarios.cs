@@ -7,7 +7,7 @@ namespace TiposVarios {
         
         private static void Main(string[] args) {
             
-            // setting encoder
+            // Setting encoder
             Console.OutputEncoding = Encoding.UTF8;
             
             #region Integers
@@ -15,21 +15,21 @@ namespace TiposVarios {
             // Guardados nos formatos de Módulo e Sinal(MS), Complemento para 1(c1) e Complemento para 2(c2), 1 bit é reservado para o sinal.
             sbyte n1 = 120; // 8 bits  => 1 byte:  (MS/c1/c2) sign(0)0000000
             short n2 = 651; // 16 bits => 2 bytes: (MS/c1/c2) sign(0)0000000.00000000
-            int   n3 = 10;  // 32 bits => 4 bytes: (MS/c1/c2) sign(0)0000000.00000000.00000000.00000000
-            long  n4 = 645; // 64 bits => 8 bytes: (MS/c1/c2) sign(0)0000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
+            int n3 = 10;    // 32 bits => 4 bytes: (MS/c1/c2) sign(0)0000000.00000000.00000000.00000000
+            long n4 = 645;  // 64 bits => 8 bytes: (MS/c1/c2) sign(0)0000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
 
             // Alternatives (System Structs), é exatamente a mesma coisa que usar os alias A.K.A short, long, etc...
             // o compilador vai reescrever usando as structs de System.IntX equivalentes anyway.
-            Byte  n5 = 13;
+            Byte n5 = 13;
             Int16 n6 = 13;
             Int32 n7 = 13134;
             Int64 n8 = 13123;
             
             // Unsigned Integers: o 1º bit deixa de ser reservardo para o sinal, liberando esse bit para storage, porém, o número é sempre positivo.
-            byte   n9  = 225;  // 8 bits  => 1 byte:  (ALWAYS POSITIVE) 00000000
-            ushort n10 = 986;  // 16 bits => 2 bytes: (ALWAYS POSITIVE) 00000000.00000000
-            uint   n11 = 464;  // 32 bits => 4 bytes: (ALWAYS POSITIVE) 00000000.00000000.00000000.00000000
-            ulong  n12 = 1561; // 64 bits => 8 bytes: (ALWAYS POSITIVE) 00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
+            byte n9  = 225;   // 8 bits  => 1 byte:  (ALWAYS POSITIVE) 00000000
+            ushort n10 = 986; // 16 bits => 2 bytes: (ALWAYS POSITIVE) 00000000.00000000
+            uint n11 = 464;   // 32 bits => 4 bytes: (ALWAYS POSITIVE) 00000000.00000000.00000000.00000000
+            ulong n12 = 1561; // 64 bits => 8 bytes: (ALWAYS POSITIVE) 00000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
         
             // Literals (Hexadecimal/Binário): é simplesmente uma notação que vem antes do número que permite escrever fora do formato de base 10. 
             int n13 = 0b1001;
@@ -43,7 +43,6 @@ namespace TiposVarios {
             Console.WriteLine(" ");
 
             #endregion
-
             
             
             #region Unicode
@@ -57,10 +56,9 @@ namespace TiposVarios {
             #endregion
 
             
-            
             #region Reais
             
-            // Guardados en formatos como o IE754, exemplo em 32 bits: sign(0) expoente(0000000) mantissa(00000000.00000000.00000000)
+            // Guardados em formatos como o IE754, exemplo em 32 bits: sign(0) expoente(0000000) mantissa(00000000.00000000.00000000)
             float   n15 = 30.342139844f; // 32 bits => 4 bytes
             double  n16 = -13123.44243d; // 64 bits => 8 bytes
             decimal n17 = 151541.98498m; // 128 bits => 16 bytes
@@ -80,7 +78,6 @@ namespace TiposVarios {
             #endregion
             
             
-             
             #region Booleans
             
             var randNum = new Random().Next(1, 10);
@@ -91,8 +88,6 @@ namespace TiposVarios {
             Console.WriteLine($"is it Morning now ({DateTime.Now})? {isMorning}");
             
             #endregion
-
-
         }
     }
 }

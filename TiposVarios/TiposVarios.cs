@@ -74,6 +74,20 @@ namespace TiposVarios {
             Console.WriteLine(" ");
             
             #endregion
+            
+            
+             
+            #region Booleans
+            
+            var randNum = new Random().Next(1, 10);
+            bool flag =  randNum > 5;
+            Console.WriteLine($"flag ({randNum} > 5)?: {flag}");
+
+            bool isMorning = DateTime.Now.TimeOfDay.Hours is < 12 and > 6;
+            Console.WriteLine($"is it Morning now ({DateTime.Now})? {isMorning}");
+            
+            #endregion
+
 
         }
     }

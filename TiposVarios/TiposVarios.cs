@@ -5,9 +5,7 @@ namespace TiposVarios {
     internal static class Exec {
         
         private static void Main(string[] args) {
-            
-            
-            
+
             #region Integers
             
             // Guardados nos formatos de Módulo e Sinal(MS), Complemento para 1(c1) e Complemento para 2(c2), 1 bit é reservado para o sinal.
@@ -16,7 +14,7 @@ namespace TiposVarios {
             int   n3 = 10;  // 32 bits => 4 bytes: (MS/c1/c2) sign(0)0000000.00000000.00000000.00000000
             long  n4 = 645; // 64 bits => 8 bytes: (MS/c1/c2) sign(0)0000000.00000000.00000000.00000000.00000000.00000000.00000000.00000000
 
-            // Alternatives to System Structs declaration, é exatamente a mesma coisa que usar os alias A.K.A short, long, etc...
+            // Alternatives (System Structs), é exatamente a mesma coisa que usar os alias A.K.A short, long, etc...
             // o compilador vai reescrever usando as structs de System.IntX equivalentes anyway.
             Byte  n5 = 13;
             Int16 n6 = 13;
@@ -33,6 +31,7 @@ namespace TiposVarios {
             int n13 = 0b1001;
             int n14 = 0x54EA;
             
+            // Printa os números na tela
             ValueType[] arr = new ValueType[] { n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14 };
             Console.WriteLine(" ");
             for (int i = 0; i < arr.Length; i++) 
@@ -40,8 +39,7 @@ namespace TiposVarios {
             Console.WriteLine(" ");
 
             #endregion
-            
-            
+
             
             
             #region Unicode
@@ -56,7 +54,26 @@ namespace TiposVarios {
 
             
             
-          
+            #region Reais
+            
+            // Guardados en formatos como o IE754, exemplo em 32 bits: sign(0) expoente(0000000) mantissa(00000000.00000000.00000000)
+            float   n15 = 30.342139844f; // 32 bits => 4 bytes
+            double  n16 = -13123.44243d; // 64 bits => 8 bytes
+            decimal n17 = 151541.98498m; // 128 bits => 16 bytes
+            
+            // Alternatives (System Structs), o mesmo caso dos integers.
+            Single  n18 = 13123.13123f;
+            Double  n19 = 13123.12312d;
+            Decimal n20 = 52434.13132m;
+            
+            // Printa os números na tela
+            ValueType[] arr2 = new ValueType[] { n15, n16, n17, n18, n19, n20 };
+            Console.WriteLine(" ");
+            for (int i = 0; i < arr2.Length; i++) 
+                Console.WriteLine($"{arr2[i].GetType().Name} n{i+15} = {arr2[i]}");
+            Console.WriteLine(" ");
+            
+            #endregion
 
         }
     }
